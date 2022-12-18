@@ -1,6 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+      font-family: 'Readex Pro', sans-serif;
+  }
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: -apple-system, BlinkMacSystemFont, 'Readex Pro', 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -10,4 +21,26 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@layer components {
+  ul.pagination {
+    @apply flex justify-center items-center mt-10;
+  }
+
+  .pagination > li {
+    @apply list-none cursor-pointer;
+  }
+
+  .pagination > li > a {
+    @apply py-2 px-4 inline-block;
+  }
+
+  .pagination > li > a:hover {
+    @apply text-gray-500;
+  }
+
+  .pagination > li.active > a {
+    @apply bg-green-900 text-white;
+  }
 }
