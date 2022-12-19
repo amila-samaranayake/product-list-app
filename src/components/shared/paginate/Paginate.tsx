@@ -5,7 +5,7 @@ function Paginate(props:any) {
     props.handlePageClick(event);
   }
   return (
-    <div className="pagination-wrap">
+    <div className="pagination-wrap pb-5">
       <ReactPaginate
         breakLabel="..."
         nextLabel="Next >"

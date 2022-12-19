@@ -6,17 +6,17 @@ function ProductCard(product:IProduct) {
     <div className="card">
       <div className="h-1/2">
         <img
-          className="w-full h-full object-cover hover:scale-150 transition-all duration-500"
+          className="w-full h-[260px] object-cover hover:scale-150 transition-all duration-500"
           src={product.thumbnail}
           alt="headphone"
         />
       </div>
 
-      <div className="p-5 flex flex-col gap-3">
+      <div className="p-3 flex flex-col gap-3">
         {/* badge */}
         <div className="flex items-center gap-2">
           <span className="badge">{product.brand}</span>
-          <span className="badge">Qty: {product.stock}</span>
+          {/* <span className="badge">Qty: {product.stock}</span> */}
         </div>
 
         {/* product title */}
@@ -31,6 +31,12 @@ function ProductCard(product:IProduct) {
             <span className="text-sm line-through opacity-50">Rs {product.price}</span>
             <span className="discount-percent">save {product.discountPercentage}%</span>
           </div>
+        </div>
+
+        {/* Stocks */}
+
+        <div>
+        <span className="text-sm font-bold">Stocks: {product.stock} </span>
         </div>
 
         {/* product rating */}

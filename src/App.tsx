@@ -6,11 +6,8 @@ function App() {
   return (
     <div className="main-content">
       <Header />
-      
-      <div className="page-content py-6 lg:py-10">
-        <div className="container">
+      <div className="container mx-auto">
           <ProductList />
-        </div>
       </div>
     </div>
   );

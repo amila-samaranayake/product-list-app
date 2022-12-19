@@ -57,15 +57,19 @@ function ProductList() {
                     {
                         products ? (
                             <>
-                                <div className="w-50">
+                                <div className="w-1/3">
                                     <Dropdown title='Products Categories' handleChangeValue={handleChangeValue} options={categories}/>
                                 </div>
-                                <div className="grid grid-cols-1 gap-10 lg:grid-cols-5 md:grid-cols-2">
-                                    {currentProducts?.map((product:IProduct) => (
-                                        <ProductCard key={product.id} {...product}/>
-                                    ))}
+                                <div className="flex item-center justify-center container mx-auto pb-3 overflow-y-auto">
+                                    <div className="grid grid-cols-1 gap-10 lg:grid-cols-3 xl:grid-cols-4 md:grid-cols-2 sm:grid-cols-1">
+                                        {currentProducts?.map((product:IProduct) => (
+                                            <ProductCard key={product.id} {...product}/>
+                                        ))}
+                                    </div>
                                 </div>
-                                <Paginate pageCount={pageCount} handlePageClick={handlePageClick} />
+                                <div>
+                                    <Paginate pageCount={pageCount} handlePageClick={handlePageClick} />
+                                </div>
                             </>
                         ) : (
                             <div className="empty">No Products...</div>

@@ -5,7 +5,7 @@
 
 @layer components {
     .card {
-        @apply bg-white text-gray-700 w-72 max-h-[35rem] shadow-lg rounded-md overflow-hidden flex flex-col
+        @apply bg-white text-gray-700 max-h-[35rem] shadow-lg rounded-md overflow-hidden flex flex-col
     }
 
     .badge {

@@ -1,9 +1,9 @@
 function Header() {
     return (
-        <nav className="bg-green-900 px-2 sm:px-4 py-2.5 rounded">
+        <nav className="bg-transparent px-2 sm:px-4 py-2.5 rounded">
         <div className="container flex flex-wrap items-center justify-between mx-auto">
           <a href="/" className="flex items-center">
-            <span className="self-center text-xl font-semibold whitespace-nowrap text-white">
+            <span className="self-center text-xl font-semibold whitespace-nowrap">
               Products Listing
             </span>
           </a>
